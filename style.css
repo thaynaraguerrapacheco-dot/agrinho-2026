@@ -1,0 +1,231 @@
+/* Configurações Globais e Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Hero Section (Cabeçalho) */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #e0f2e9;
+}
+
+/* Seção Sobre e Galeria */
+.about h2 {
+    color: #2c5e3b;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.about p {
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.caption {
+    padding: 15px;
+    font-size: 0.95rem;
+    color: #555;
+    text-align: center;
+}
+
+/* Seção do Quiz */
+.quiz-section {
+    background-color: #e8efe9;
+    padding: 60px 0;
+    margin-top: 40px;
+}
+
+.quiz-section h2 {
+    color: #1e4027;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.quiz-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 1.15rem;
+    color: #333;
+}
+
+.btn-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #2c5e3b;
+    background: transparent;
+    color: #2c5e3b;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background: #2c5e3b;
+    color: #fff;
+}
+
+/* Feedback das Respostas */
+.feedback {
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    margin-top: 10px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.correct-box {
+    background-color: #d4edda;
+    color: #155724;
+    border-left: 5px solid #28a745;
+}
+
+.wrong-box {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left: 5px solid #dc3545;
+}
+
+/* Caixa de Resultado Final */
+.result-box {
+    background: #2c5e3b;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.result-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.btn-restart {
+    margin-top: 15px;
+    padding: 10px 25px;
+    border: none;
+    background: #fff;
+    color: #2c5e3b;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-restart:hover {
+    background: #e0f2e9;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Rodapé */
+footer {
+    background-color: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    margin-top: 60px;
+}
+
+/* Animação simples */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Responsividade Avançada (Media Queries) */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 20px;
+    }
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+    .btn-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
